@@ -19,6 +19,13 @@ net
 
 http
   .createServer(require('./src/StatisticsProvider'))
-  .listen(process.env.PORT || 8080, function() {
+  .listen(443, function() {
+    console.log('Statistics provider is ready on 8080');
+  });
+
+
+http
+  .createServer(require('./src/StatisticsProvider'))
+  .listen(80, function() {
     console.log('Statistics provider is ready on 8080');
   });
