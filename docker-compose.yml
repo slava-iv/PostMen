@@ -1,0 +1,10 @@
+database:
+  image: mongo:latest
+postman:
+  build: .
+  ports:
+    - "5000:5000"
+    - "5001:5001"
+    - "8080:8080"
+  links:
+    - database

@@ -1,3 +1,7 @@
 var mongoose = require('mongoose');
 
-module.exports = mongoose.connect('mongodb://localhost/bowling');
+var databaseHostname = process.env.NODE_ENV === 'production'
+  ? 'database'
+  : 'localhost';
+
+module.exports = mongoose.connect('mongodb://' + databaseHostname + '/bowling');
