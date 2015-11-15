@@ -4,7 +4,6 @@ var controllerSocket, gameSocket;
 
 var handlers = {
   GET: function(socket, args) {
-    socket.write('HTTP/1.1 200 OK\n\n')
     if (args[1] === '/csv') {
       socket.write('HELLO');
     }
@@ -41,7 +40,17 @@ var handlers = {
   }
 };
 
-module.exports = function (socket) {
+module.exports = function(socket) {
+  socket.write('HTTP/1.1 200 OK\n' +
+    'Date: ' + new Date() + '\n' +
+    'Server: Bowling\n' +
+    'X-Powered-By: Flesh and bones\n' +
+    'Last-Modified: Wed, 11 Feb 2009 11:20:59 GMT\n' +
+    'Content-Language: ru\n' +
+    'Content-Type: text/html; charset=utf-8\n' +
+    'Connection: keep-alive\n\n'
+  );
+
   socket.bowling = {};
 
   socket.on('data', function(data) {
