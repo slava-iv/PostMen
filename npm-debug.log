@@ -10,7 +10,7 @@
 6 info server postman@0.0.0
 7 verbose unsafe-perm in lifecycle true
 8 info postman@0.0.0 Failed to exec server script
-9 verbose stack Error: postman@0.0.0 server: `node src/index.js`
+9 verbose stack Error: postman@0.0.0 server: `node server.js`
 9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (/home/danila/.nvm/versions/node/v4.2.2/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
@@ -27,13 +27,13 @@
 14 error node v4.2.2
 15 error npm  v2.14.7
 16 error code ELIFECYCLE
-17 error postman@0.0.0 server: `node src/index.js`
+17 error postman@0.0.0 server: `node server.js`
 17 error Exit status 1
-18 error Failed at the postman@0.0.0 server script 'node src/index.js'.
+18 error Failed at the postman@0.0.0 server script 'node server.js'.
 18 error This is most likely a problem with the postman package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     node src/index.js
+18 error     node server.js
 18 error You can get their info via:
 18 error     npm owner ls postman
 18 error There is likely additional logging output above.
