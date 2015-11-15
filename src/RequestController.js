@@ -50,7 +50,6 @@ module.exports = function(socket) {
 
   socket.write(
     'HTTP/1.1 200 OK\r\n' +
-    'Last-Modified: Wed, 11 Feb 2009 11:20:59 GMT\r\n' +
     'Content-Language: en\r\n' +
     'Content-Type: text/html; charset=utf-8\r\n' +
     'Connection: keep-alive\r\n\r\n'
